@@ -38,7 +38,7 @@ namespace ServicioWindows
             {
                 blBandera = true;
 
-                EventLog.WriteEntry("Se inicio el evento de copiado", EventLogEntryType.Information);
+                //EventLog.WriteEntry("Se inicio el evento de copiado", EventLogEntryType.Information);
 
                 string stRutaOrigen = ConfigurationSettings.AppSettings["stRutaOrigen"].ToString();
                 string stRutaDestino = ConfigurationSettings.AppSettings["stRutaDestino"].ToString();
@@ -57,17 +57,17 @@ namespace ServicioWindows
 
                     if (File.Exists(stRutaDestino + archivo.Name))
                     {
-                        EventLog.WriteEntry("Se ha copiado el archivo con éxito", EventLogEntryType.Information);
+                        //EventLog.WriteEntry("Se ha copiado el archivo con éxito", EventLogEntryType.Information);
                     }
                     else
                     {
-                        EventLog.WriteEntry("No se copió el archivo", EventLogEntryType.Information);
+                        //EventLog.WriteEntry("No se copió el archivo", EventLogEntryType.Information);
                     }
                 }
             }
             catch (Exception ex)
             {
-                EventLog.WriteEntry(ex.Message, EventLogEntryType.Error);
+                //EventLog.WriteEntry(ex.Message, EventLogEntryType.Error);
             }
             finally
             {
